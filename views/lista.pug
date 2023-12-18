@@ -1,0 +1,25 @@
+html
+  head
+    title Lista de Películas
+    link(rel='stylesheet', href='/public/css/lista.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css', integrity='sha384-s/wnf5REnptb94GEp2d4nBldD04jRjYp2a8vXGLsd5GtCbjGJUnA4cPd7zI5LbT/C', crossorigin='anonymous')
+  body
+    .list-container
+      h1 Lista de Películas
+      table
+        thead
+          tr
+            th Película
+            th Director
+            th Género
+        tbody
+          each pelicula in peliculas
+            tr
+              td
+                i.fa.fa-film
+                span.pelicula-nombre #{pelicula.titulo}
+              td
+                span.pelicula-director #{pelicula.director}
+              td
+                span.pelicula-genero #{pelicula.genero}
+      a(href='/form') Ingresar nueva Película

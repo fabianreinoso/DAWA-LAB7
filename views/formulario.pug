@@ -1,0 +1,16 @@
+html
+  head
+    title Formulario de Películas
+    link(rel='stylesheet', href='/public/css/form.css')
+  body
+    .form-container
+      h1 Ingresar Película
+      form(action='/guardar', method='POST')
+        label(for='titulo') Título
+        input(type='text', name='titulo')
+        label(for='director') Director
+        input(type='text', name='director')
+        label(for='genero') Género
+        input(type='text', name='genero')
+        button(type='submit') Guardar
+      a(href='/') Ver Películas
